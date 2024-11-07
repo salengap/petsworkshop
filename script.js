@@ -65,3 +65,14 @@ const pets = [
 	// 	}
 	// }
 ];
+
+const petslist = document.querySelector("#petslist");
+console.log(petslist);
+
+    
+pets.forEach((cat) => {
+    petslist.innerHTML += `<li>${cat.name} is a SPECIES of ${cat.age} year(s) old.</li>`;
+})
+
+
+
