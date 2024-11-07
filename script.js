@@ -71,8 +71,14 @@ console.log(petslist);
 
     
 pets.forEach((cat) => {
-    petslist.innerHTML += `<li>${cat.name} is a SPECIES of ${cat.age} year(s) old. His favorite
- hobbies is to ${cat.hobbies.join(" , ").toLowerCase()}.</li>`;
+    if (cat.owner) {
+    petslist.innerHTML += `<li>${cat.name} is a ${cat.species.toLowerCase()} of ${cat.age} year(s) old. His owner is ${cat.owner.name} and his favorite
+    hobbies is to ${cat.hobbies.join(" , ").toLowerCase()}.</li>`     
+} else {
+    petslist.innerHTML += `<li>${cat.name} is a ${cat.species.toLowerCase()} of ${cat.age} year(s) old. His favorite
+    hobbies is to ${cat.hobbies.join(" , ").toLowerCase()}.</li>`;
+}
+ 
 })
 
 
