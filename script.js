@@ -51,19 +51,19 @@ const pets = [
 			console.log(`Meowed times today: ${this.meowCounter}`);
 		}
 	},
-	// {
-	// 	hobbies: ["Be cute"],
-	// 	species: "Old kitten",
-	// 	age: 9,
-	// 	name: "Meow Sr",
-	// 	sound: "meooow!",
-	// 	meowCounter: 0,
-	// 	speak() { // same as writing "speak: function() {}"
-	// 		this.meowCounter++;
-	// 		console.log(this.sound);
-	// 		console.log(`Meowed times today: ${this.meowCounter}`);
-	// 	}
-	// }
+	{
+		hobbies: ["Be cute"],
+		species: "Old kitten",
+		age: 9,
+		name: "Meow Sr",
+		sound: "meooow!",
+		meowCounter: 0,
+		speak() { // same as writing "speak: function() {}"
+			this.meowCounter++;
+			console.log(this.sound);
+			console.log(`Meowed times today: ${this.meowCounter}`);
+		}
+	}
 ];
 
 const petslist = document.querySelector("#petslist");
@@ -71,7 +71,8 @@ console.log(petslist);
 
     
 pets.forEach((cat) => {
-    petslist.innerHTML += `<li>${cat.name} is a SPECIES of ${cat.age} year(s) old.</li>`;
+    petslist.innerHTML += `<li>${cat.name} is a SPECIES of ${cat.age} year(s) old. His favorite
+ hobbies is to ${cat.hobbies.join(" , ").toLowerCase()}.</li>`;
 })
 
 
